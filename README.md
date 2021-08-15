@@ -3,6 +3,8 @@
 
 如果你喜欢，可以fork到你的仓库里改改自己用~
 
+原仓库地址: [AyagawaSeirin/homepage: 开坑我的个人主页](https://github.com/AyagawaSeirin/homepage)
+
 目前有两个版本:<br>
 1.双页版，在double分支<br>
 2.单页版，在master分支
