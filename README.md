@@ -1,6 +1,6 @@
-# [https://among.moe](https://www.among.moe)
+# https://among.moe
 
-新注册了一个域名，欢迎大家来访问呀～ [among.moe](https://www.among.moe)
+新注册了一个域名，欢迎大家来访问呀～ https://among.moe
 
 [@AyagawaSeirin](https://github.com/AyagawaSeirin)的个人主页作品
 
