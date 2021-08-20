@@ -1,4 +1,7 @@
 # [https://among.moe](https://www.among.moe)
+
+新注册了一个域名，欢迎大家来访问呀～ [among.moe](https://www.among.moe)
+
 [@AyagawaSeirin](https://github.com/AyagawaSeirin)的个人主页作品
 
 如果你喜欢，可以fork到你的仓库里改改自己用~
