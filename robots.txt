@@ -1,4 +1,4 @@
 ># allow google
 User-agent: *
 Allow: /
-Sitemap: https://xiarimangguo.github.io/sitemap.xml
+Sitemap: https://among.moe/sitemap.xml
