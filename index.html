@@ -7,16 +7,22 @@
 -->
 <html lang="zh-CN">
 <head>
+	
+	<!-- jsDelivr CDN fallback -->
+	<script defer>
+		(a=>{"use strict";let r,s,e;const l=["cdn.jsdelivr.net","fastly.jsdelivr.net","gcore.jsdelivr.net","testingcf.jsdelivr.net","test1.jsdelivr.net"],t="//",n=l[0],i=Date.now(),o=2e3,c="jsdelivr-auto-fallback",f="/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?",d=e=>e&&e.includes(t+n),m=e=>e.replace(t+n,t+r),u=window.setTimeout,v=a.querySelectorAll.bind(a),g=()=>{let e,t;for(e of v('link[rel="stylesheet"]'))t=e.href,d(t)&&!t.includes(f)&&(e.href=m(t));for(e of v("script"))if(t=e.src,d(t)){const r=a.createElement("script");r.src=m(t),e.defer=!0,e.src="",e.before(r),e.remove()}for(e of v("img"))t=e.src,d(t)&&(e.src="",e.src=m(t));for(e of v("*[style]"))t=e.getAttribute("style"),d(t)&&e.setAttribute("style",m(t));for(e of v("style"))t=e.innerHTML,d(t)&&(e.innerHTML=m(t))},y=()=>{!e&&s&&r&&(console.warn(n+" is not available. Use "+r),e=!0,u(g,0),u(g,20),setInterval(g,500))},b=(()=>{try{return Object.assign({},JSON.parse(localStorage.getItem(c)||"{}"))}catch{return{}}})();var h=()=>{b.time=i,b.failed=!1,b.fastNode=null;for(const t of l)((e,t)=>{let r;const s=a.createElement("link"),l=e=>{r&&(clearTimeout(r),r=0,e||(s.href="data:text/plain;base64,"),s.remove(),t(e))};r=u(l,o),s.addEventListener("error",()=>l(!1)),s.addEventListener("load",()=>l(!0)),s.rel="stylesheet",s.text="text/css",s.href=e+f+i,a.head.insertAdjacentElement("afterbegin",s)})("https://"+t,e=>{e||t!==n||(s=!0,b.failed=!0),e&&!r&&(r=t),e&&!b.fastNode&&(b.fastNode=t),y()});u(()=>{s&&!r&&(r=l[1],y()),localStorage.setItem(c,JSON.stringify(b))},o+100)};b.time&&i-b.time<36e5&&b.failed&&b.fastNode?(s=!0,r=b.fastNode,y(),u(h,1e3)):h()})(document);
+	</script>
+	
     <meta charset="utf-8">
     <title>夏日芒果の小屋</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/mdui/css/mdui.min.css">
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/css/main.css">
-    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/mdui/css/mdui.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/css/index.css">
     <!-- <link rel="stylesheet" href="/assets/css/detaile.css"> -->
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1625701_q2422cy34wn.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_3063123_e10jre1h39.css">
-    <link rel="icon" href="https://fastly.jsdelivr.net/gh/xiarimangguo/aLive2D@sites/files/avatar.jpg">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/xiarimangguo/aLive2D@sites/files/avatar.jpg">
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-22S6K7R7RR"></script>
@@ -49,7 +55,7 @@
         <div class="mdui-col-xs-12 mdui-col-md-2">
             <div class="rin-left">
                 <div class="rin-logo">
-                    <img src="https://fastly.jsdelivr.net/gh/xiarimangguo/aLive2D@sites/files/avatar.jpg">
+                    <img src="https://cdn.jsdelivr.net/gh/xiarimangguo/aLive2D@sites/files/avatar.jpg">
                 </div>
                 <div class="rin-left-title">夏&nbsp;日&nbsp;芒&nbsp;果</div>
                 <div class="rin-left-title2">xiarimangguo</div>
@@ -91,13 +97,26 @@
                     <div class="rin-card-content mdui-typo"><h4>你好呀，这里是夏日芒果の小屋～</h4>
                         终于等到你～欢迎来我的小屋做客呀～<br>
                         <h4>下面让我来介绍一下自己吧</h4>
-                        本人坐标河南郑州，是一名初中生，是非常喜欢信息技术的，同时也对ACG文化感兴趣<br><br>
+                        本人坐标河南郑州，是一名初中生啦，是非常喜欢信息技术的，同时也对ACG文化感兴趣<br><br>
                         同时，我的与众不同，造就了不一样的我<br><br>
                         那时，别人都在谈论自己的段位，而我已经敲开了互联网的大门<br><br>
                         在小学时，我编写了<a href="https://ts18.cooles.top/" target="_blank" style="color:dodgerblue;">我的第一个HTML页面</a>，采用的是响应式布局<br><br>
                         当它在浏览器中成功显示时，那种成就感是我永远不会忘记的<br><br>
                         自2017年以来，互联网陪伴着我一起走过了4年，走过无数个春夏秋冬<br><br>
                         它带给我广阔的天地，一个懵懂的少年，敲开了新世界的大门
+                        <br>
+                        <h4>🐌友情提示</h4>
+                        <blockquote>
+                        今天，你的 jsDelivr CDN 挂了吗？
+                        </blockquote>
+                        使用 <strong style="font-size:1.2em;">jsDelivr CDN</strong> 的小伙伴们注意啦！<br><br>
+                        在2022年5月17日，jsDelivr CDN 的服务受到了墙墙的关照 <br><br>
+                        目前在 <strong style="font-size:1em;">中国大陆</strong> 地区已无法正常访问。<br><br>
+                        快快检查一下你的网站或博客是否使用了 jsDelivr CDN 加速吧，如果是的话，你的网站很有可能已经无法正常显示啦~<br><br>
+                        所以说，你的CDN已经成🐌了，快去更换你的CDN吧‼<br>
+                        <h5>更换方法</h5>
+                        推荐使用这个项目啦～ <a href="https://github.com/PipecraftNet/jsdelivr-auto-fallback" target="_blank" style="color:dodgerblue;">jsdelivr-auto-fallback</a><br><br>
+                        这样你就不用手动替换啦，还可以保证快速的访问体验呀～
                         <br>
                         <h4>📻广播站已发布!</h4>
                         <blockquote>
@@ -331,9 +350,9 @@
         </div>
     </div>
 </main>
-<script src="https://fastly.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/mdui/js/mdui.min.js"></script>
-<!--<script src="https://fastly.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/js/main.js"></script>-->
-<script type="text/javascript" src="https://fastly.jsdelivr.net/gh/coolfishstudio/cfs.snow.js/CFS.Snow.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/mdui/js/mdui.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/js/main.js"></script>-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/coolfishstudio/cfs.snow.js/CFS.Snow.min.js"></script>
 <script>snow.down()</script>
 </body>
 </html>
