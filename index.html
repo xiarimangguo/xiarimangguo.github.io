@@ -121,6 +121,17 @@
                         欢迎来到夏日芒果の广播站呀～<br>
                         愿每一片苍穹下都有一个最美的你～<br>
                         </blockquote>
+                        <!-- Live Stream For Live2D -->
+                        <!-- Now Playing -->
+                        <div id="live">
+                        <p><img style="display:inline;border:2px solid #eeeeee;border-radius:100%;width:35px;position:relative;top:8px;" id="album" src="https://cdn.jsdelivr.net/gh/xiarimangguo/aLive2D@sites/files/avatar.jpg"></img>&nbsp;&nbsp;<strong id="playing">夏日芒果の广播站</strong>&nbsp;<strong style="font-size:0.8em;color:red;"> • Live </strong>&nbsp;&nbsp;</p>
+                        </div>
+                        <!-- Now Playing -->
+                        <video id="radio" controls autoplay width="95%" height="180px">
+                        <source src="https://radio.among.moe/live/.m3u8" type="application/x-mpegURL">
+                        </video>
+                        <br><br>
+                        <!-- Live Stream For Live2D -->
                         <a href="https://1st.among.moe/radio/" target="_blank" style="color:dodgerblue;">点击这里收听吧</a><br><br>
                         大多数时候，电台会播放各种各样的英文歌，有时还会有更多有趣的东西呀～<br>
                         <br> 
@@ -347,6 +358,90 @@
         </div>
     </div>
 </main>
+<!-- HLS.js Start -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  var video = document.getElementById('radio');
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.addEventListener('canplay', function () {
+      video.play();
+    });
+  } else {
+    if (Hls.isSupported()) {
+      var hls = new Hls({
+        debug: true,
+      });
+      hls.loadSource('https://radio.among.moe/live/.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+        video.muted = true;
+        video.play();
+      });
+    }
+  }
+</script>
+<!-- HLS.js End -->
+<!-- JS for Now Playing -->
+<script>
+setInterval(function(){
+    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) { 
+        window.applicationCache.update(); 
+    }
+	getNowPlaying();
+},15000);
+function getNowPlaying() {
+    var xhr = xhrAjax();
+    xhr.open("GET","https://91.90.194.171/api/Radio/NowPlaying/",true);
+    xhr.send();
+    xhr.onreadystatechange = function(){
+        if (xhr.readyState === 4) {
+            switch (xhr.status) {
+            	//已找到
+                case 200:
+                case 304:
+                    document.getElementById("playing").innerHTML = xhr.responseText;
+                    document.getElementById("album").src = "https://91.90.194.171/api/Radio/getCover?Purge="+Date.now();
+                     break;
+                //无权限
+                case 401:
+                case 403:
+                case 405:
+                     break;
+                //未找到
+                case 404:
+                case 410:
+                     break;
+                //发生错误
+                case 400:
+                case 408:
+                case 500:
+                case 502:
+                case 503:
+                case 504:
+                     break;
+                default:
+                     break;
+            }
+        }
+    }
+}
+function xhrAjax() {
+	try{
+		return new XMLHttpRequest();
+	} catch(e) {
+		try{
+			return new ActiveXObject("Msxml2.XMLHTTP");
+		} catch(e) {
+			try{
+				return new ActiveXObject("Microsoft.XMLHTTP");
+			} catch(e) {
+				return;
+			}
+		}
+	}
+}
+</script>
+<!-- JS for Now Playing -->
 <script src="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/mdui/js/mdui.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/gh/AyagawaSeirin/homepage@latest/assets/js/main.js"></script>-->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/coolfishstudio/cfs.snow.js/CFS.Snow.min.js"></script>
