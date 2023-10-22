@@ -61,11 +61,8 @@
                 <div class="rin-left-title2">xiarimangguo</div>
                 <div class="rin-left-slogan">「其生若浮，其死若休」</div>
 
-<!--
 
-                <a class="mdui-btn mdui-btn-raised rin-btn rin-btn-blue rin-btn-left mdui-text-capitalize" href="https://among.moe/" target="_blank"><span class="iconfont iconBlog"></span> Blog</a>
-
--->
+                <a class="mdui-btn mdui-btn-raised rin-btn rin-btn-blue rin-btn-left mdui-text-capitalize" href="https://blog.among.moe/" target="_blank"><span class="iconfont iconBlog"></span> Blog</a>
 
                 <a class="mdui-btn mdui-btn-raised rin-btn rin-btn-blue rin-btn-left mdui-text-capitalize" href="https://1st.among.moe/radio/" target="_blank"><span class="iconfont icon-shouyinji01"></span> Radio</a>
 
@@ -79,7 +76,7 @@
 
 -->
 
-                <a class="mdui-btn mdui-btn-raised rin-btn rin-btn-blue rin-btn-left mdui-text-capitalize" href="https://91.90.194.171/discuss/" target="_blank"><span class="iconfont iconCommentenable"></span> Discuss</a>
+                <a class="mdui-btn mdui-btn-raised rin-btn rin-btn-blue rin-btn-left mdui-text-capitalize" href="https://91.210.165.131/discuss/" target="_blank"><span class="iconfont iconCommentenable"></span> Discuss</a>
 
 <!--
                 
@@ -150,7 +147,7 @@
           
                         <br>
                         ✨快来讨论区交流你的看法吧～<br>
-                        🎈快来加入<a href="https://91.90.194.171/discuss/" target="_blank" style="color:dodgerblue;">讨论区</a>，一起感受节日的氛围吧～<br>
+                        🎈快来加入<a href="https://91.210.165.131/discuss/" target="_blank" style="color:dodgerblue;">讨论区</a>，一起感受节日的氛围吧～<br>
                         🎉也可以点击左侧的"Discuss"加入讨论呀～<br>
                         <br>
                         快来访问我的<a href="https://github.com/xiarimangguo" target="_blank" style="color:dodgerblue;">Github主页</a>吧，相信一定会带给你不一样的收获。<br>
@@ -385,7 +382,7 @@ setInterval(function(){
 },15000);
 function getNowPlaying() {
     var xhr = xhrAjax();
-    xhr.open("GET","https://91.90.194.171/api/Radio/NowPlaying/",true);
+    xhr.open("GET","https://91.210.165.131/api/Radio/NowPlaying/",true);
     xhr.send();
     xhr.onreadystatechange = function(){
         if (xhr.readyState === 4) {
@@ -394,7 +391,7 @@ function getNowPlaying() {
                 case 200:
                 case 304:
                     document.getElementById("playing").innerHTML = xhr.responseText;
-                    document.getElementById("album").src = "https://91.90.194.171/api/Radio/getCover?Purge="+Date.now();
+                    document.getElementById("album").src = "https://91.210.165.131/api/Radio/getCover?Purge="+Date.now();
                      break;
                 //无权限
                 case 401:
