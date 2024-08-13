@@ -127,7 +127,7 @@
                         </div>
                         <!-- Now Playing -->
                         <video id="radio" controls autoplay width="95%" height="180px">
-                        <source src="https://nyu.olmga.cn/radio/.m3u8" type="application/x-mpegURL">
+                        <source src="https://elaina.onlymoe.ga:1936/live/.m3u8" type="application/x-mpegURL">
                         </video>
                         <br><br>
                         <!-- Live Stream For Live2D -->
@@ -365,7 +365,7 @@
       var hls = new Hls({
         debug: true,
       });
-      hls.loadSource('https://nyu.olmga.cn/radio/.m3u8');
+      hls.loadSource('https://elaina.onlymoe.ga:1936/live/.m3u8');
       hls.attachMedia(video);
       hls.on(Hls.Events.MEDIA_ATTACHED, function () {
         video.muted = true;
