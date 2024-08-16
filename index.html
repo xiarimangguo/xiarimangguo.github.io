@@ -136,7 +136,7 @@
                         <br> 
                         <h4><b>夏日芒果の网络</b></h4>
                         • 欢迎你加入夏日芒果の网络呀，加入你可以使用@1st.among.moe域的邮箱，<br><br>
-                        • 还可以使用 <a href="https://onlymoe.ga" style="color:dodgerblue;">Onlymoe Frp</a> 的免费内网穿透服务，<br><br>
+                        • 还可以使用 <a href="https://frp.among.moe" style="color:dodgerblue;">Onlymoe Frp</a> 的免费内网穿透服务，<br><br>
                         • 如果你喜欢的话，你还可以使用我的子域搭建网站，也就是xxx.among.moe这样的呀~<br><br>
                         • 我是非常欢迎你加入among.moe的呀～<br><br>
                         • 另外，欢迎来体验一下我的推流服务器呀～<br><br>
@@ -385,7 +385,7 @@ setInterval(function(){
 },15000);
 function getNowPlaying() {
     var xhr = xhrAjax();
-    xhr.open("GET","https://91.210.165.131/api/Radio/NowPlaying/",true);
+    xhr.open("GET","https://api.among.moe/api/Radio/NowPlaying/",true);
     xhr.send();
     xhr.onreadystatechange = function(){
         if (xhr.readyState === 4) {
@@ -394,7 +394,7 @@ function getNowPlaying() {
                 case 200:
                 case 304:
                     document.getElementById("playing").innerHTML = xhr.responseText;
-                    document.getElementById("album").src = "https://91.210.165.131/api/Radio/getCover?Purge="+Date.now();
+                    document.getElementById("album").src = "https://api.among.moe/api/Radio/getCover?Purge="+Date.now();
                      break;
                 //无权限
                 case 401:
